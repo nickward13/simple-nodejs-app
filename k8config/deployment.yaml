@@ -20,6 +20,6 @@ spec:
         image: hectagonacr.azurecr.io/simplenodejsapp:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8080
       imagePullSecrets:
         - name: azurecontainerreg
