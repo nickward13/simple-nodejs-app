@@ -18,6 +18,12 @@ spec:
       containers:
       - name: simplenodejsapp
         image: hectagonacr.azurecr.io/simplenodejsapp:latest
+        env:
+          - name: appInsightsKey
+            valueFrom:
+              secretKeyRef:
+                name: simple-nodejs-app-insights-key
+                key: key
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
