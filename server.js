@@ -13,6 +13,7 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
+
 app.get('/', (req, res) => {
   dns.lookup(os.hostname(), function (err, add, fam) {
     var message = '<h1>Hello world!</h1>';
