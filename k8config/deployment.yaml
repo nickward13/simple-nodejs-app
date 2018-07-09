@@ -19,7 +19,7 @@ spec:
       - name: simplenodejsapp
         image: hectagonacr.azurecr.io/simplenodejsapp:latest
         env:
-          - name: appInsightsKey
+          - name: APPINSIGHTS_INSTRUMENTATIONKEY
             valueFrom:
               secretKeyRef:
                 name: simple-nodejs-app-insights-key

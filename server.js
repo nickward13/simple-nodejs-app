@@ -3,11 +3,9 @@
 const express = require('express');
 var os = require('os');
 var dns = require('dns');
-const appInsights = require('applicationinsights');
 
-var appInsightsKey = process.env.appInsightsKey;
-appInsights.setup(appInsightsKey).start();
-console.log('App Insights Key: ' + appInsightsKey);
+const appInsights = require('applicationinsights');
+appInsights.setup().start();
 
 // Constants
 const PORT = 8080;
