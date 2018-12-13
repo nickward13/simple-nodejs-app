@@ -8,7 +8,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "applicationinsights": "^1.0.3",
     "express": "^4.16.1"
   },
   "devDependencies": {
