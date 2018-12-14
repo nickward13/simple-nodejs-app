@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: simplenodejsappdeployment
+  name: simple-nodejs-app-deployment
 spec:
   replicas: 2
   strategy:
@@ -13,19 +13,12 @@ spec:
   template:
     metadata:
       labels:
-        app: simplenodejsapp
+        app: simple-nodejs-app
     spec:
       containers:
-      - name: simplenodejsapp
-        image: hectagonacr.azurecr.io/simplenodejsapp:latest
-        env:
-          - name: APPINSIGHTS_INSTRUMENTATIONKEY
-            valueFrom:
-              secretKeyRef:
-                name: simple-nodejs-app-insights-key
-                key: key
+      - name: simple-nodejs-app
+        image: hectagonacr.azurecr.io/simple-nodejs-app:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-      imagePullSecrets:
-        - name: azurecontainerreg
+      
