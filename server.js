@@ -14,7 +14,7 @@ dns.lookup(os.hostname(), function(err, address, addressFamily) {
 });
 
 app.get('/', (req, res) => {
-  var message = '<h1>Hello world!</h1>';
+  var message = '<h1>Simple Node.JS App</h1>';
   message = message + ('<p>Hostname: ' + os.hostname());
   message = message + ('<p>OS Platform: ' + os.platform());
   message = message + ('<p>IP Address: ' + hostAddress + '\n');
