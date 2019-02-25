@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: simple-nodejs-app
-        image: hectagonacr.azurecr.io/simple-nodejs-app:latest
+        image: hectagonacr.azurecr.io/simple-nodejs-app:2
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
